@@ -1,0 +1,46 @@
+{
+    "name": "formName",
+    "title": "A registration form",
+    "description": "A simple form example.",
+    "method": "post",
+    "enctype": "multipart/form-data",
+    "action": "?mod=add",
+    "properties": {
+        "title": {
+            "title": "Заголовок",
+            "name": "title",
+            "type": "input",
+            "required": true,
+            "onChange": "console.log(this.value)"
+        },
+        "message": {
+            "title": "Повідомлення",
+            "name": "message",
+            "type": "textarea",
+            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "required": true,
+            "onChange": "console.log(this.value)"
+        },
+        "language": {
+            "type": "select",
+            "title": "Статус",
+            "name": "status",
+            "options": {
+                "0": "В запас",
+                "1": "Опубликовать"
+            }
+        },
+        "file": {
+            "title": "Фотографія (png, jpg)",
+            "name": "file",
+            "type": "file",
+            "accept": "image/png, image/jpg, image/jpeg",
+            "required": true
+        },
+        "submit": {
+            "type": "submit",
+            "title": "Додати",
+            "name": "submit"
+        }
+    }
+}

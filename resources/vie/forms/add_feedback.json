@@ -1,0 +1,46 @@
+{
+    "name": "formFeedback",
+    "title": "A feedback form",
+    "description": "A simple form example.",
+    "method": "post",
+    "enctype": "multipart/form-data",
+    "action": "?mod=add",
+    "properties": {
+        "name": {
+            "title": "Ім'я",
+            "name": "name",
+            "type": "input",
+            "placeholder": "Латинські символи, та цифри",
+            "required": true,
+            "onChange": "console.log(this.value)"
+        },
+        "email": {
+            "title": "Email",
+            "name": "email",
+            "type": "input",
+            "placeholder": "example@mail.ua",
+            "value": "example@mail.ua",
+            "required": true
+        },
+        "message": {
+            "title": "Відгук",
+            "name": "message",
+            "type": "textarea",
+            "value": "Sint ullamco exercitation cillum magna occaecat Lorem sit do nisi",
+            "required": true
+        },
+        "captcha": {
+            "title": "Капча",
+            "name": "captcha",
+            "type": "captcha",
+            "width": "140",
+            "img": "/libs/captcha.php",
+            "required": true
+        },
+        "submit": {
+            "type": "submit",
+            "title": "Додати",
+            "name": "submit"
+        }
+    }
+}

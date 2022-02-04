@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13pt;
+}
+
+.app-content {
+    padding-top: 64px;
+}
+
+#main-content{
+    padding-top: 64px;
+    padding-left: 10px;
+}
