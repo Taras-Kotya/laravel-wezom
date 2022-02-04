@@ -100,13 +100,11 @@ class Controller extends BaseController
         );
 
 
-  
-
         if (!empty($user[0]->id)) {
             $request->session()->put('is_auth', 'true');
             $request->session()->put('name', $user[0]->name);
             $request->session()->put('password', $user[0]->password);
-            $request->session()->flash('message', 'Hello!!!');
+            $request->session()->flash('message', 'Успішна авторизація !!');
         } else {
             $request->session()->flash('message', 'Невірний логін чи пароль');
         }
