@@ -17,4 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'index'])->name('index');
 Route::get('/pi', [Controller::class, 'pi'])->name('pi');
-Route::post('/add_user', [Controller::class, 'add_user'])->name('add_user');
+Route::get('/deluser', [Controller::class, 'deluser'])->name('deluser');
+
+Route::get('/add_user', [Controller::class, 'add_user'])->name('add_user');
+Route::post('/add_user', [Controller::class, 'add_user_post'])->name('add_user');
+Route::get('/edit/{id}', [Controller::class, 'edit'])->name('edit');
+Route::post('/save_user/{id}', [Controller::class, 'save_user'])->name('edit');
