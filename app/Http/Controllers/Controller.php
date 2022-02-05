@@ -55,7 +55,7 @@ class Controller extends BaseController
     }
 
 
-    public function edit($id)
+    public function edit_user($id)
     {
         $user = DB::select('select * from users where id=?', [$id]);
         return view('edit_user', ['user' => $user[0]]);

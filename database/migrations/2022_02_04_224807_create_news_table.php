@@ -15,8 +15,10 @@ class CreateNewsTable extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
+            $table->boolean('is_active')->default(false);
             $table->string('title');
-            $table->text('text');
+            $table->string('image')->default('noimage');
+            $table->text('content');
             $table->timestamps();
         });
     }
@@ -29,5 +31,13 @@ class CreateNewsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('news');
+        /*
+        Schema::table('page', function (Blueprint $table) {
+            $table->dropColumn('is_active');
+            $table->dropColumn('title');
+            $table->dropColumn('image');
+            $table->dropColumn('content');
+        });
+        */
     }
 }
